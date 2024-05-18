@@ -18,8 +18,8 @@ String error = (String)request.getAttribute("error");
 		<table style="margin:auto; width:850px">
 			<tr>
 				<td style="text-align:center; width:80px">[<a href="<%=request.getContextPath() %>/view/menu.jsp">メニュー</a>]</td>
-				<td style="text-align:center; width:80px">[<a href="<%=request.getContextPath() %>/view/insert.jsp">書籍登録</a>]</td>
-				<td style="text-align:center; width:508px; font-size:24px;">書籍一覧</td>
+				<td style="text-align:center; width:80px">[<a href="<%=request.getContextPath() %>/list">書籍一覧</a>]</td>
+				<td style="text-align:center; width:508px; font-size:24px;">書籍登録</td>
 				<td style="width:80px">&nbsp;</td>
 				<td style="width:80px">&nbsp;</td>
 			</tr>
