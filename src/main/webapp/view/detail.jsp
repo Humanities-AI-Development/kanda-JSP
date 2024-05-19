@@ -28,7 +28,11 @@ Book book = (Book)request.getAttribute("book");
 <!-- -------------ここまでがヘッダー ---------------------------------------------------------------->
 
 		<div style="text-align:center;margin-top:80px;">
-    	
+		<button style="margin-right: 40px;" onclick="location.href='<%=request.getContextPath() %>/detail?isbn=<%=book.getIsbn()%>&cmd=update'">変更</button>
+		<button onclick="location.href='<%=request.getContextPath()%>/delete?isbn=<%=book.getIsbn()%>'">削除</button>
+		
+		
+    	<br><br><br>
 			<table style="margin: 0 auto">
 			
 				<tr>

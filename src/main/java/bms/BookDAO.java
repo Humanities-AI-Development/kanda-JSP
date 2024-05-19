@@ -158,4 +158,30 @@ public class BookDAO {
 		  }
 		  return book;//1件のデータが格納されたBook型インスタンス
 		}
+	//削除処理----------------------------------------------------
+
+	public void delete(String isbn){		
+		  Connection con = null;
+		  Statement smt = null;
+		  Book book = new Book();
+		  String sql = "delete from bookinfo where isbn='"+isbn+"'";//削除SQL
+		  int count = 0;
+		 
+		  try{
+			  con = getConnection();//DB接続
+			  smt = con.createStatement();//SQLを使えるようにしてる
+			  count = smt.executeUpdate(sql);//SQL実行
+			  
+		 
+		  }catch(Exception e){
+		     throw new IllegalStateException(e);
+		  }finally{
+		     if( smt != null ){
+		        try{smt.close();}catch(SQLException ignore){}
+		    }
+		     if( con != null ){
+		        try{con.close();}catch(SQLException ignore){}
+		    }
+		  }
+		}
 }

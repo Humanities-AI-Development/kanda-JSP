@@ -95,6 +95,7 @@ public class InsertServlet extends HttpServlet {
 
 			// エラーがない場合、ListServletにフォワード
 			request.setAttribute("count",count);//登録件数をスコープに登録しておく
+			request.getRequestDispatcher("/list").forward(request, response);
 
 
 		}catch(IllegalStateException e) {
